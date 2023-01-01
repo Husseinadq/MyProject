@@ -4,7 +4,6 @@ import 'package:test01/presentation/resources/font_manager.dart';
 import 'package:test01/presentation/resources/styles_manager.dart';
 import 'package:test01/presentation/resources/values_manager.dart';
 
-
 ThemeData getApplicationTheme() {
   return ThemeData(
       //main colors
@@ -46,14 +45,12 @@ ThemeData getApplicationTheme() {
 
       //text theme
       textTheme: TextTheme(
-        displayLarge:
-            getLightStyle(color: ColorManager.white, fontSize: FontSize.s22),
-        headline1: getSemiboldStyle(
+        headlineLarge: getSemiboldStyle(
             color: ColorManager.darkGrey, fontSize: FontSize.s16),
-        subtitle1: getMediumStyle(
+        titleMedium: getMediumStyle(
             color: ColorManager.lightGrey, fontSize: FontSize.s14),
-        caption: getRegularStyle(color: ColorManager.grey1),
-        bodyText1: getRegularStyle(color: ColorManager.grey),
+        bodyLarge: getRegularStyle(color: ColorManager.grey1),
+        bodySmall: getRegularStyle(color: ColorManager.grey),
       ),
 
       //input decoration theme (text form field)
@@ -85,7 +82,8 @@ ThemeData getApplicationTheme() {
             borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))),
         //focused error border
         focusedErrorBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: ColorManager.primary,width: AppSize.s1_5),borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))
-        ),
+            borderSide:
+                BorderSide(color: ColorManager.primary, width: AppSize.s1_5),
+            borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))),
       ));
 }
